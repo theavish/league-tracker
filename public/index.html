@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>League Tracker</title>
+    <!-- js -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/routes/router.js"></script>
+    <script src="js/controllers/homeCtrl.js"></script>
+    <script src="js/controllers/championsCtrl.js"></script>
+    <script src="js/controllers/itemsCtrl.js"></script>
+    <script src="js/controllers/profileCtrl.js"></script>
+    <script src="js/controllers/masteriesCtrl.js"></script>
+    <script src="js/controllers/runesCtrl.js"></script>
+    <script src="js/controllers/abilitiesCtrl.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body ng-app="leagueTracker">
+    <div class="navbar">
+        <center>
+            <b><span><a ui-sref="home">HOME</a></span></b> |
+            <b><span><a ui-sref="items">ITEMS</a></span></b> |
+            <b><span><a ui-sref="profile">PROFILE</a></span></b> |
+            <b><span><a ui-sref="champions">CHAMPIONS</a></span></b> |
+            <b><span><a ui-sref="abilities">ABILITIES</a></span></b> |
+            <b><span><a ui-sref="masteries">MASTERIES</a></span></b> |
+            <b><span><a ui-sref="runes">RUNES</a></span></b>
+        </center>
+        <hr>
+    </div>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+    <div class="footer">
+        <hr>
+        <center>
+            <p class="riot-legal">
+                League Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+            </p>
+        </center>
+    </div>
+</body>
+
+</html>

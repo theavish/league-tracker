@@ -1,0 +1,11 @@
+body {
+    padding-top: 20px;
+}
+div.navbar {
+    font-size: 20px;
+}
+p.riot-legal {
+    font-size: 10px;
+    width: 60%;
+}
+
