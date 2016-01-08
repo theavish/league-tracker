@@ -1,3 +1,16 @@
 <div ng-controller="profileCtrl">
-    profile
+    <form ng-submit="submitSummoner()">
+        <input type="text" placeholder="Summoner Name" ng-model="summonerName">
+        <button>Submit</button>
+    </form>
+    <div ng-repeat="game in stats">
+        <p ng-show="true">
+            <span><strong>{{game.playerStatSummaryType}}</strong><br></span>
+            <span>Wins: {{game.wins}}<br></span>
+            <span>Total Kills: {{game.aggregatedStats.totalChampionKills}}<br></span>
+            <span>Total Assists: {{game.aggregatedStats.totalAssists}}</span><br>
+            <span>Total CS: {{game.aggregatedStats.totalMinionKills}}</span><br>
+            <span>Total Turret Kills: {{game.aggregatedStats.totalTurretsKilled}}</span><br>
+        </p>
+    </div>
 </div>

@@ -1,15 +1,18 @@
 {
   "name": "league-tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Track and analyze League of Legends stats",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'No tests have been implemented' && exit 1"
   },
-  "author": "",
+  "author": "Avi Samloff - avi.samloff@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
     "express": "^4.13.3",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "request": "^2.67.0",
   }
 }

@@ -1,5 +1,6 @@
 body {
-    padding-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 div.navbar {
     font-size: 20px;
@@ -8,4 +9,28 @@ p.riot-legal {
     font-size: 10px;
     width: 60%;
 }
+img.champion-list {
+  max-width: 64px;
+  max-height: 64px;
+}
+div.champion {
+  max-height: 400px;
+  margin: 20px;
+  height: 400px;
+  overflow: scroll;
+}
+div.champion-caption {
+  background-color: rgba(255,255,255,0.25);
+}
+div.champion-card {
+  background-size: cover;
 
+}
+div.left {
+  float: left;
+  margin-left: 17.5%;
+}
+div.right {
+  float: right;
+  margin-right: 17.5%;
+}

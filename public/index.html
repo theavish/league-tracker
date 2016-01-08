@@ -17,35 +17,55 @@
     <script src="js/controllers/masteriesCtrl.js"></script>
     <script src="js/controllers/runesCtrl.js"></script>
     <script src="js/controllers/abilitiesCtrl.js"></script>
+    <script src="js/controllers/styleCtrl.js"></script>
+    <script src="js/controllers/loginCtrl.js"></script>
+    <script src="js/services/championsFct.js"></script>
+    <script src="js/services/profileFct.js"></script>
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<body ng-app="leagueTracker">
-    <div class="navbar">
-        <center>
-            <b><span><a ui-sref="home">HOME</a></span></b> |
-            <b><span><a ui-sref="items">ITEMS</a></span></b> |
-            <b><span><a ui-sref="profile">PROFILE</a></span></b> |
-            <b><span><a ui-sref="champions">CHAMPIONS</a></span></b> |
-            <b><span><a ui-sref="abilities">ABILITIES</a></span></b> |
-            <b><span><a ui-sref="masteries">MASTERIES</a></span></b> |
-            <b><span><a ui-sref="runes">RUNES</a></span></b>
-        </center>
-        <hr>
-    </div>
+<body ng-app="leagueTracker" ng-controller="styleCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/"><img width="64px" class="pull-left" src="http://orig08.deviantart.net/f922/f/2013/186/6/5/_drawn__logo_by_lt_commander-d6c6bj9.png" alt="League Tracker"></a><a class="navbar-brand" href="/">League Tracker</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!-- class="active" -->
+                    <li><a id="profile-tab" ui-sref="profile">Profile</a></li>
+                    <li><a id="champions-tab" ui-sref="champions">Champions</a></li>
+                    <li><a id="abilities-tab" ui-sref="abilities">Abilities</a></li>
+                    <li><a id="items-tab" ui-sref="items">Items</a></li>
+                    <li><a id="masteries-tab" ui-sref="masteries">Masteries</a></li>
+                    <li><a id="runes-tab" ui-sref="runes">Runes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref="login">Login</a></li>
+                    <li>
+                       <p class="navbar-text">Username | Summoner | Level: 30 | Icon</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <div ui-view></div>
     </div>
-    <div class="footer">
-        <hr>
-        <center>
-            <p class="riot-legal">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container text-center">
+            <small>
                 League Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
-            </p>
-        </center>
-    </div>
+            </small>
+        </div>
+    </nav>
 </body>
 
 </html>

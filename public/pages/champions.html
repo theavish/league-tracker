@@ -1,3 +1,45 @@
 <div ng-controller="championsCtrl">
-    champions
+    <center>
+        <button ng-click="getAllChampions()">get champions</button>
+        <br>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">Name</button>
+            <button type="button" class="btn btn-default">Release</button>
+            <button type="button" class="btn btn-default">Health</button>
+            <button type="button" class="btn btn-default">Health Regen</button>
+            <button type="button" class="btn btn-default">Mana</button>
+            <button type="button" class="btn btn-default">Mana Regen</button>
+            <button type="button" class="btn btn-default">Attack Damage</button>
+            <button type="button" class="btn btn-default">Attack Speed</button>
+            <button type="button" class="btn btn-default">Move Speed</button>
+            <button type="button" class="btn btn-default">Armor</button>
+            <button type="button" class="btn btn-default">Magic Resist</button>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 champion" ng-repeat="champion in champions | orderBy: 'name'">
+                <div ng-click="show=!show" class="thumbnail champion-card" style="background:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_0.jpg')">
+                    <div class="caption champion-caption">
+                        <img class="champion-list" ng-src="http://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/{{champion.image.full}}">
+                        <h4>{{champion.name}} {{champion.title}}</h4>
+                        <div class="champion-lore" ng-hide="show">
+                            <p>{{champion.blurb}}</p>
+                        </div>
+                        <div class="champion-stats" ng-show="show">
+                            <p>Base Armor: {{champion.stats.armor}}</p>
+                            <p>Base Attack Damage: {{champion.stats.attackdamage}}</p>
+                            <p>Base HP: {{champion.stats.hp}}</p>
+                            <p>Base HP Regen: {{champion.stats.hpregen}}</p>
+                            <p ng-show="champion.stats.mp > 0">Base MP: {{champion.stats.mp}}</p>
+                            <p ng-show="champion.stats.mp > 0">Base MP Regen: {{champion.stats.mpregen}}</p>
+                            <p>Base Attack Speed: {{(0.625 / (1 + champion.stats.attackspeedoffset))}}</p>
+                            <p>Base Move Speed: {{champion.stats.movespeed}}</p>
+                            <p>Base Magic Resist: {{champion.stats.spellblock}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
 </div>

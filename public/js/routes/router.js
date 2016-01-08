@@ -25,11 +25,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/masteries',
         templateUrl: 'pages/masteries.html'
     })
+    .state('login', {
+        url: '/login',
+        templateUrl: 'pages/login.html'
+    })
     .state('runes', {
         url: '/runes',
         templateUrl: 'pages/runes.html'
     });
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
 
 });
