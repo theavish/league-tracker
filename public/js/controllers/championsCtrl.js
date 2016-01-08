@@ -6,9 +6,6 @@ app.controller('championsCtrl', function($scope, championsFct) {
       for (var key in data.data) {
         $scope.champions.push(data.data[key]);
       }
-      for (var i = 0; i < $scope.champions.length; i++) {
-        $scope.champions[i].blurb = $scope.champions[i].lore.slice(0, 150) + '...';
-      }
     });
   };
 

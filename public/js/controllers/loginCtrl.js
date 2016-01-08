@@ -1,11 +1,7 @@
-app.controller('loginCtrl', function($scope) {
-  
-  $scope.loginUser = function(user) {
-    console.log(user);
-  };
+app.controller('loginCtrl', function($scope, $auth) {
 
-  $scope.registerUser = function(user) {
-    console.log(user);
-  };
+  $scope.loginUser = function(user) {};
+
+  $scope.registerUser = function(user) {};
 
 });

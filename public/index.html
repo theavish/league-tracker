@@ -3,11 +3,13 @@
 
 <head>
     <title>League Tracker</title>
-    <!-- js -->
+    <!-- library js -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <!-- my js -->
     <script src="js/app.js"></script>
     <script src="js/routes/router.js"></script>
     <script src="js/controllers/homeCtrl.js"></script>
@@ -40,17 +42,17 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <!-- class="active" -->
-                    <li><a id="profile-tab" ui-sref="profile">Profile</a></li>
-                    <li><a id="champions-tab" ui-sref="champions">Champions</a></li>
-                    <li><a id="abilities-tab" ui-sref="abilities">Abilities</a></li>
-                    <li><a id="items-tab" ui-sref="items">Items</a></li>
-                    <li><a id="masteries-tab" ui-sref="masteries">Masteries</a></li>
-                    <li><a id="runes-tab" ui-sref="runes">Runes</a></li>
+                    <li id="profile-tab"><a ui-sref="profile">Profile</a></li>
+                    <li id="champions-tab"><a ui-sref="champions">Champions</a></li>
+                    <li id="abilities-tab"><a ui-sref="abilities">Abilities</a></li>
+                    <li id="items-tab"><a ui-sref="items">Items</a></li>
+                    <li id="masteries-tab"><a ui-sref="masteries">Masteries</a></li>
+                    <li id="runes-tab" s><a ui-sref="runes">Runes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a ui-sref="login">Login</a></li>
                     <li>
-                       <p class="navbar-text">Username | Summoner | Level: 30 | Icon</p>
+                        <p class="navbar-text">Username | Summoner | Level: 30 | Icon</p>
                     </li>
                 </ul>
             </div>
