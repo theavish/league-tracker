@@ -23,6 +23,7 @@
     <script src="js/controllers/loginCtrl.js"></script>
     <script src="js/services/championsFct.js"></script>
     <script src="js/services/profileFct.js"></script>
+    <script src="js/services/AuthFct.js"></script>
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -51,6 +52,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a ui-sref="login">Login</a></li>
+                    <li><a ui-sref="home" ng-click="logout()">Logout</a></li>
                     <li>
                         <p class="navbar-text">Username | Summoner | Level: 30 | Icon</p>
                     </li>
